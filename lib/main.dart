@@ -90,21 +90,21 @@ class HomePage extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {},
       style: ButtonStyle(
-        shape: MaterialStatePropertyAll(
+        shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-        minimumSize: const MaterialStatePropertyAll(Size(300, 50)),
-        backgroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.hovered)) {
+        minimumSize: const WidgetStatePropertyAll(Size(300, 50)),
+        backgroundColor: WidgetStateProperty.resolveWith<Color>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.hovered)) {
               return const Color.fromRGBO(197, 248, 42, 1);
             } else {
               return const Color.fromRGBO(51, 51, 51, 1);
             }
           },
         ),
-        foregroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.hovered)) {
+        foregroundColor: WidgetStateProperty.resolveWith<Color>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.hovered)) {
               return Colors.black;
             } else {
               return Colors.white;
